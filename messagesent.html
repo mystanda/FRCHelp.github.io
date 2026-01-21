@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Submit a Question – FRC Help Q&A</title>
+  <title>Message Sent</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
@@ -10,96 +10,40 @@
       background: #0f172a;
       color: #e5e7eb;
       margin: 0;
-      padding: 2rem;
+      padding: 0;
       display: flex;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    .container {
+    .card {
       background: #020617;
-      padding: 2rem 2.5rem;
+      padding: 2.5rem 3rem;
       border-radius: 16px;
-      max-width: 600px;
-      width: 100%;
+      text-align: center;
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      max-width: 480px;
     }
     h1 {
-      text-align: center;
       margin-top: 0;
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
     }
-    label {
-      display: block;
+    p {
       margin-top: 1rem;
-      margin-bottom: 0.3rem;
-      font-weight: 600;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 0.7rem;
-      border-radius: 8px;
-      border: none;
-      margin-bottom: 1rem;
-      background: #1e293b;
-      color: #e5e7eb;
-    }
-    textarea {
-      height: 120px;
-      resize: vertical;
-    }
-    button {
-      width: 100%;
-      padding: 0.9rem;
-      background: #22c55e;
-      border: none;
-      border-radius: 999px;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      color: #022c22;
-      transition: 0.2s;
-    }
-    button:hover {
-      background: #16a34a;
+      color: #cbd5f5;
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Submit Your Question</h1>
+  <div class="card">
+    <h1>Message Sent</h1>
+    <p>Your message has been delivered successfully.</p>
+    <h1>Question Sent</h1>
+    <p>Your Question will be answered via Email</p>
+    <p>Please remember this is ran by Students</p>
+    <p>Questions will not be answers immediately</p>
 
-    <form action="https://formsubmit.co/joubertholden@gmail.com" method="POST">
-
-      <!-- Prevent spam -->
-      <input type="hidden" name="_captcha" value="false">
-
-      <!-- Redirect after submit -->
-      <input type="hidden" name="_next" value="https://mystanda.github.io/FRChelp/messagesent.html">
-
-      <label>Email</label>
-      <input type="email" name="Email" required />
-
-      <label>Name</label>
-      <input type="text" name="Name" required />
-
-      <label>Team Number</label>
-      <input type="number" name="Team Number" required min="1" step="1" />
-
-      <label>Category</label>
-      <select name="Category" required>
-        <option value="Build">Build</option>
-        <option value="Programming">Programming</option>
-        <option value="Electrical">Electrical</option>
-        <option value="Design">Design</option>
-      </select>
-
-      <label>Your Question</label>
-      <textarea name="Question" required></textarea>
-
-      <label>More Information (optional)</label>
-      <textarea name="More Information"></textarea>
-
-      <button type="submit">Send Question</button>
-    </form>
   </div>
 </body>
 </html>
