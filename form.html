@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Submit a Question – FRC Help Q&A</title>
@@ -14,26 +15,32 @@
       display: flex;
       justify-content: center;
     }
+
     .container {
       background: #020617;
       padding: 2rem 2.5rem;
       border-radius: 16px;
       max-width: 600px;
       width: 100%;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
     }
+
     h1 {
       text-align: center;
       margin-top: 0;
       margin-bottom: 1.5rem;
     }
+
     label {
       display: block;
       margin-top: 1rem;
       margin-bottom: 0.3rem;
       font-weight: 600;
     }
-    input, select, textarea {
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 0.7rem;
       border-radius: 8px;
@@ -42,10 +49,12 @@
       background: #1e293b;
       color: #e5e7eb;
     }
+
     textarea {
       height: 120px;
       resize: vertical;
     }
+
     button {
       display: inline-block;
       margin-top: 1.5rem;
@@ -56,24 +65,27 @@
       font-weight: 600;
       letter-spacing: 0.03em;
       transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-      box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+      box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
       border: none;
       cursor: pointer;
       width: 100%;
       font-size: 1rem;
     }
+
     button:hover {
       transform: translateY(-2px);
       background: #16a34a;
-      box-shadow: 0 14px 30px rgba(34,197,94,0.45);
+      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.45);
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <h1>Submit Your Question</h1>
 
-    <form id="questionForm" action="https://formsubmit.co/frchelp.github.io@gmail.com" method="POST">
+    <form id="questionForm" action="https://formsubmit.co/frchelp.github.io@gmail.com" method="POST"
+      enctype="multipart/form-data">
 
       <!-- Prevent spam -->
       <input type="hidden" name="_captcha" value="false">
@@ -92,10 +104,13 @@
 
       <label>Category</label>
       <select name="Category" required>
-        <option value="Build">Build</option>
+        <option value="Select" disabled selected>-- Select an option --</option>
+        <option value="Build">Mechanical - Fabrication</option>
+        <option value="Design">Mechanical - Design/CAD</option>
         <option value="Programming">Programming</option>
         <option value="Electrical">Electrical</option>
-        <option value="Design">Design</option>
+        <option value="Strategy">Strategy</option>
+        <option value="Competitions">Competitions</option>
         <option value="Other">Other</option>
       </select>
 
@@ -105,18 +120,26 @@
       <label>More Information (optional)</label>
       <textarea name="More Information"></textarea>
 
+      <label>Attach Image (optional)</label>
+      <input type="file" name="attachment1" accept="image/*" />
+
+      <label>Attach Image (optional)</label>
+      <input type="file" name="attachment2" accept="image/*" />
+
+
       <button type="submit">Send Question</button>
     </form>
   </div>
 
   <script>
-    document.getElementById("questionForm").addEventListener("submit", function() {
+    document.getElementById("questionForm").addEventListener("submit", function () {
       // Give FormSubmit time to receive the data
       setTimeout(() => {
-        window.location.href = "messagesent.html";
-      }, 1000); // safer delay
+        window.location.href = "message-sent.html";
+      }, 1000); // Safer delay
     });
   </script>
 
 </body>
+
 </html>
