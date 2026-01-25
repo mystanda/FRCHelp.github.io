@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="UTF-8" />
-  <title>FRC Help Q&A</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <style>
-
-    body {
+body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
@@ -99,25 +88,3 @@
       color: #64748b;
       margin-bottom: 0.75rem;
     }
-
-  </style>
-  
-</head>
-
-<body>
-
-  <main class="card">
-    <div class="tagline">Welcome</div>
-    <h1>FRC Help Q&A</h1>
-    <p>
-      Got questions? We've got answers
-      <br><i>Dig</i> into the FRC intel vault
-    </p>
-    <a class="button" href="form.html">
-      Enter
-    </a>
-  </main>
-  
-</body>
-
-</html>
